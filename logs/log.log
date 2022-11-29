@@ -1,1 +1,6 @@
 hello
+
+logs/
+bin/
+
+pullFile.txt
