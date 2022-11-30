@@ -1,15 +1,15 @@
 {
 	"info": {
-		"_postman_id": "c8217b19-0a89-4aa9-bf1f-1d623df3d091",
-		"name": "testing API",
+		"_postman_id": "231c5f81-7219-460b-94ba-27ac205e17e4",
+		"name": "test the api",
 		"description": "Buy or rent spacecrafts",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "23903465-c8217b19-0a89-4aa9-bf1f-1d623df3d091"
+		"_uid": "23903465-231c5f81-7219-460b-94ba-27ac205e17e4"
 	},
 	"item": [
 		{
 			"name": "Read a spacecraft",
-			"id": "62297490-126f-48bb-81d8-753f39956b3f",
+			"id": "fa00a27d-10b3-4d53-a477-52970280b8ec",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -33,7 +33,7 @@
 					"variable": [
 						{
 							"key": "spacecraftId",
-							"value": "et minim commodo ipsum",
+							"value": "cupidatat cillum sit ea laboris",
 							"description": "(Required) The unique identifier of the spacecraft"
 						}
 					]
@@ -41,15 +41,14 @@
 			},
 			"response": [
 				{
-					"id": "08de9b64-c2ed-4c41-b8f9-7116f82ac242",
+					"id": "ff56d4e0-ce37-46ff-b39c-ac63cea80763",
 					"name": "The spacecraft corresponding to the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -64,7 +63,7 @@
 							"variable": [
 								{
 									"key": "spacecraftId",
-									"value": "et minim commodo ipsum",
+									"value": "cupidatat cillum sit ea laboris",
 									"description": "(Required) The unique identifier of the spacecraft"
 								}
 							]
@@ -73,7 +72,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -81,19 +79,17 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
-					"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"dolore sed velit adipis\",\n  \"type\": \"probe\",\n  \"description\": \"te\"\n}"
+					"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"ad in velit eu veniam\",\n  \"type\": \"probe\",\n  \"description\": \"adipisicing ut sunt quis\"\n}"
 				},
 				{
-					"id": "41170990-9616-462d-b88a-aed992072c82",
+					"id": "427746c8-3e8e-4da7-a8b5-8c3f6f0df555",
 					"name": "No spacecraft found for the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -108,7 +104,7 @@
 							"variable": [
 								{
 									"key": "spacecraftId",
-									"value": "et minim commodo ipsum",
+									"value": "cupidatat cillum sit ea laboris",
 									"description": "(Required) The unique identifier of the spacecraft"
 								}
 							]
@@ -117,7 +113,6 @@
 					"status": "Not Found",
 					"code": 404,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -125,19 +120,17 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
-					"body": "{\n  \"message\": \"sunt qui\"\n}"
+					"body": "{\n  \"message\": \"anim occaecat cupidatat\"\n}"
 				},
 				{
-					"id": "f33ceb32-cb74-40de-bf14-32ea6e0e48b8",
+					"id": "74fcc0ae-eac9-4cc8-8d23-c7a6a537a397",
 					"name": "Unexpected error",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -152,7 +145,7 @@
 							"variable": [
 								{
 									"key": "spacecraftId",
-									"value": "et minim commodo ipsum",
+									"value": "cupidatat cillum sit ea laboris",
 									"description": "(Required) The unique identifier of the spacecraft"
 								}
 							]
@@ -161,7 +154,6 @@
 					"status": "Internal Server Error",
 					"code": 500,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -169,8 +161,7 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
-					"body": "{\n  \"message\": \"sunt qui\"\n}"
+					"body": "{\n  \"message\": \"anim occaecat cupidatat\"\n}"
 				}
 			]
 		}
@@ -197,7 +188,7 @@
 	},
 	"variable": [
 		{
-			"id": "392003e9-8563-430c-95d8-1a0c56f355ca",
+			"id": "87210c99-041a-464e-98c2-268be1e41212",
 			"key": "baseUrl",
 			"value": "/",
 			"type": "string"

@@ -1,15 +1,15 @@
 {
 	"info": {
-		"_postman_id": "c8217b19-0a89-4aa9-bf1f-1d623df3d091",
+		"_postman_id": "1b1f7b0a-1f7d-4e99-b2fe-abb0ee98adb6",
 		"name": "testing API",
 		"description": "Buy or rent spacecrafts",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_uid": "23903465-c8217b19-0a89-4aa9-bf1f-1d623df3d091"
+		"_uid": "23903465-1b1f7b0a-1f7d-4e99-b2fe-abb0ee98adb6"
 	},
 	"item": [
 		{
 			"name": "Read a spacecraft",
-			"id": "62297490-126f-48bb-81d8-753f39956b3f",
+			"id": "ccf8fa9b-833f-4ad1-a839-08afde2e6a6d",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -41,15 +41,14 @@
 			},
 			"response": [
 				{
-					"id": "08de9b64-c2ed-4c41-b8f9-7116f82ac242",
+					"id": "262ff572-dc52-43b7-bd85-ce47775aa01f",
 					"name": "The spacecraft corresponding to the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -73,7 +72,6 @@
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -81,19 +79,17 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"dolore sed velit adipis\",\n  \"type\": \"probe\",\n  \"description\": \"te\"\n}"
 				},
 				{
-					"id": "41170990-9616-462d-b88a-aed992072c82",
+					"id": "f82175b4-4817-4aff-8533-ed340fd912b2",
 					"name": "No spacecraft found for the provided `spacecraftId`",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -117,7 +113,6 @@
 					"status": "Not Found",
 					"code": 404,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -125,19 +120,17 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"message\": \"sunt qui\"\n}"
 				},
 				{
-					"id": "f33ceb32-cb74-40de-bf14-32ea6e0e48b8",
+					"id": "c783f7d2-baf9-40c6-b5e0-8204e7e6cbfc",
 					"name": "Unexpected error",
 					"originalRequest": {
 						"method": "GET",
 						"header": [
 							{
-								"description": "Added as a part of security scheme: apikey",
-								"key": "X-Api-Key",
-								"value": "<API Key>"
+								"key": "Accept",
+								"value": "application/json"
 							}
 						],
 						"url": {
@@ -161,7 +154,6 @@
 					"status": "Internal Server Error",
 					"code": 500,
 					"_postman_previewlanguage": "json",
-					"_postman_previewtype": "html",
 					"header": [
 						{
 							"key": "Content-Type",
@@ -169,7 +161,6 @@
 						}
 					],
 					"cookie": [],
-					"responseTime": null,
 					"body": "{\n  \"message\": \"sunt qui\"\n}"
 				}
 			]
@@ -195,9 +186,35 @@
 			}
 		]
 	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4c33c38d-fdd0-4db8-9b74-3fc5e13625e2",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ec07c88b-4875-469e-8d72-9c59e4575610",
+				"type": "text/javascript",
+				"exec": [
+					"pm.globals.get(\"variable_key\");",
+					"var jsonObject = xml2Json(responseBody);",
+					"pm.test(\"Successful POST request\", function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([201,202]);",
+					"});"
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"id": "392003e9-8563-430c-95d8-1a0c56f355ca",
+			"id": "0c063fbc-3d36-408b-84a1-e94274c2b816",
 			"key": "baseUrl",
 			"value": "/",
 			"type": "string"
