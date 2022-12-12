@@ -1,1 +1,1 @@
-g
+console.log("You are in branch2 and branch2 is not yet merged into main.");
